@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleGOuke3.css">
+</head>
+
+<body>
+    <button onclick="updateView(shape, color)">random shape</button>
+    <button onclick="reset()">reset</button>
+    <div id="container">
+
+    </div>
+</body>
+
+
+
+<script>
+    let html;
+    let colors = ["blue", "red", "green", "yellow", "pink", "orange", "gray", "black", "brown", "lightblue"]
+    let shapes = ["square", "rectangle", "circle", "triangle-up", "triangle-topleft", "parallelogram", "egg", "pacman", "moon", "cone"]
+    let color;
+    let shape;
+
+    function randomfarge() {
+        let r = generateRandomIntInRange(0, 9)
+        color = colors[r]
+        console.log(color)
+    }
+
+    function randomShape() {
+        let r = generateRandomIntInRange(0, 9)
+        shape = shapes[r]
+    }
+    console.log(shape)
+
+    function generateRandomIntInRange(min, max) {
+        return (Math.floor(Math.random() * (max - min + 1)) + min);
+    } // Generate a random number between min and max
+
+    function reset() {
+        document.getElementById('container').innerHTML = ``
+    }
+
+
+    randomfarge()
+    randomShape()
+    function updateView(form, farge) {
+        randomfarge()
+        randomShape()
+        let formStyle;
+        if ((form == "square") || (form == "rectangle") || (form == "egg") || (form == "parallelogram") || (form == "circle")) {
+            formStyle = `background: ${farge};`
+        }
+        if ((form == "cone") || (form == "triangle-topleft")) {
+            formStyle = `border-top: 100px solid ${farge};`}
+        if (form == "triangle-up") { formStyle = `border-bottom: 100px solid ${farge};` }
+        if (form == "pacman") {
+            formStyle = `border-top: 60px solid ${farge};
+                            border-left: 60px solid ${farge};
+                                border-bottom: 60px solid ${farge};`
+        }
+        if (form == "moon") { formStyle = `box-shadow: 15px 15px 0 0 ${farge};` }
+        document.getElementById('container').innerHTML += /*HTML*/ `<div class="marg"><div style="${formStyle}" class="${form}"></div></div>`;
+    }
+</script>
+
+</html>
+
+<!-- //http://127.0.0.1:5500/oppgaveuke3.html  -->

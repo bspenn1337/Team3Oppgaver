@@ -1,0 +1,89 @@
+
+
+
+
+.square {
+    width: 100px;
+    height: 100px;
+    background: red;
+  }
+
+
+  .rectangle {
+    width: 200px;
+    height: 100px;
+    background: red;
+  }
+  
+  .circle {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%
+  }
+
+  .triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+  }
+
+  .triangle-topleft {
+    width: 0;
+    height: 0;
+    border-top: 100px solid red;
+    border-right: 100px solid transparent;
+  }
+
+  .parallelogram {
+    width: 150px;
+    height: 100px;
+    transform: skew(20deg);
+    background: red;
+  }
+
+  .egg {
+    display: block;
+    width: 126px;
+    height: 180px;
+    background: red;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  }
+
+  .pacman {
+    width: 0px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-top: 60px solid red;
+    border-left: 60px solid red;
+    border-bottom: 60px solid red;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .moon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 0 red;
+  }
+
+  .cone {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-top: 100px solid red;
+    border-radius: 50%;
+  }
+
+  .marg {
+    width: 100px;
+    height: 100px;
+    margin: 3%;
+    float: left;
+  }
